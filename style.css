@@ -487,3 +487,26 @@ body {
     border-radius: 5px;
     transition: width 1s ease-in-out;
 }
+
+/* --- IKON LET'S CONNECT --- */
+.connect-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.connect-item i {
+    font-size: 18px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Warna Khas Gmail dan Instagram */
+.icon-gmail {
+    color: #ea4335; /* Warna Merah Gmail */
+}
+
+.icon-ig {
+    color: #e1306c; /* Warna Pink/Merah Instagram */
+}
