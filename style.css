@@ -27,12 +27,11 @@
     --border-color: #333333;
 }
 
-/* --- MENERAPKAN WARNA & GAMBAR BACKGROUND KE BODY --- */
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('sekolah.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
     
     color: var(--text-color);
     line-height: 1.6;
