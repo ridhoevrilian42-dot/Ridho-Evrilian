@@ -3,139 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ridho Evrilian | Software Engineering</title>
-    <!-- Font Awesome untuk Ikon Sidebar & Judul -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Ridho Evrilian | Software Engineering Enthusiast</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">Lian<span>.</span></div>
+        <button id="theme-toggle" class="theme-btn">🌙 Dark Mode</button>
+    </nav>
 
-    <!-- NAV TOMBOL TEMA -->
-    <div class="top-bar">
-        <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i> Dark Mode</button>
-    </div>
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <img src="profil.jpeg" alt="Foto Ridho Evrilian" class="profile-img">
+        <h1 class="hero-title">Ridho Evrilian</h1>
+        <p class="hero-subtitle">High School Student | Software & IoT Enthusiast</p>
+    </header>
 
-    <div class="resume-container">
-        
-        <!-- SIDEBAR KIRI -->
-        <aside class="sidebar">
-            <div class="profile-box">
-                <img src="profile.jpeg" alt="Ridho Evrilian" class="profile-img">
-            </div>
-
-            <div class="name-title-box">
-                <h1 class="user-name">RIDHO<br>EVRILIAN</h1>
-                <p class="user-role">Software & IoT Enthusiast</p>
-            </div>
-
-            <!-- KONTAK -->
-            <div class="sidebar-section contact-box">
-                <div class="contact-item">
-                    <div class="icon-circle"><i class="fas fa-envelope"></i></div>
-                    <span>emailanda@gmail.com</span>
-                </div>
-                <div class="contact-item">
-                    <div class="icon-circle"><i class="fab fa-instagram"></i></div>
-                    <span>@yanzzie7</span>
-                </div>
-            </div>
-
-            <!-- SKILLS -->
-            <div class="sidebar-section">
-                <div class="sidebar-header">
-                    <div class="sidebar-icon"><i class="fas fa-tasks"></i></div>
-                    <h2>SKILLS</h2>
-                </div>
-                
-                <div class="skill-progress-item">
-                    <span>HTML / CSS / JS</span>
-                    <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
-                </div>
-                <div class="skill-progress-item">
-                    <span>Python & C++</span>
-                    <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
-                </div>
-                <div class="skill-progress-item">
-                    <span>Arduino & IoT</span>
-                    <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
-                </div>
-                <div class="skill-progress-item">
-                    <span>Problem Solving</span>
-                    <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
-                </div>
-                <div class="skill-progress-item">
-                    <span>Teamwork & Adaptability</span>
-                    <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
-                </div>
-            </div>
-        </aside>
-
-        <!-- KONTEN UTAMA KANAN -->
-        <main class="main-content">
+    <!-- ABOUT ME SECTION -->
+    <section class="container" id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <p class="lang-id">Halo, saya Ridho Evrilian, siswa SMA yang memiliki ketertarikan besar terhadap inovasi teknologi, Kecerdasan Buatan (AI), dan Internet of Things (IoT). Saya sangat antusias bereksperimen, memecahkan tantangan logika, dan merakit alat-alat IoT sederhana untuk mempraktikkan teori yang saya pelajari. Menyadari pesatnya perkembangan industri digital, saat ini saya fokus mempelajari dasar-dasar pemrograman dan pengembangan web. Berbekal rasa ingin tahu yang tinggi, saya bercita-cita melanjutkan pendidikan di jurusan Teknik Informatika untuk siap menghadapi peluang masa depan di dunia Software Engineering.</p>
             
-            <!-- SUMMARY -->
-            <section class="content-section">
-                <div class="section-header">
-                    <div class="header-icon"><i class="fas fa-user"></i></div>
-                    <h2>PROFESSIONAL SUMMARY</h2>
-                </div>
-                <p class="summary-text">
-                    Halo, saya Ridho Evrilian, siswa SMA yang memiliki ketertarikan besar terhadap inovasi teknologi, Kecerdasan Buatan (AI), dan Internet of Things (IoT). Saya antusias bereksperimen, memecahkan tantangan logika, dan merakit alat-alat IoT sederhana untuk mempraktikkan teori yang dipelajari. Saat ini saya fokus mempelajari dasar-dasar pemrograman dan pengembangan web untuk mempersiapkan diri melanjutkan pendidikan ke jurusan Teknik Informatika.
-                </p>
-            </section>
+            <p class="lang-en">Hello, I am Ridho Evrilian, a high school student with a strong passion for technological innovation, Artificial Intelligence (AI), and the Internet of Things (IoT). I am highly enthusiastic about experimenting, solving logical challenges, and building simple IoT devices to put my theoretical knowledge into practice. Recognizing the rapid growth of the digital industry, I am currently focusing on learning the fundamentals of programming and web development. Driven by deep curiosity, I aspire to pursue a degree in Informatics Engineering to prepare for future opportunities in the Software Engineering world.</p>
+        </div>
+    </section>
 
-            <!-- EXPERIENCE & PROJECTS -->
-            <section class="content-section">
-                <div class="section-header">
-                    <div class="header-icon"><i class="fas fa-briefcase"></i></div>
-                    <h2>PROJECTS & EXPERIENCE</h2>
-                </div>
+    <!-- EDUCATION SECTION -->
+    <section class="container" id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="card">
+            <h3 class="card-title">SMA Gunung Madu</h3>
+            <p class="card-subtitle">Kurikulum Merdeka – Peminatan Informatika | 2024 – 2027 (Expected)</p>
+            <p class="card-text">🇮🇩 Menunjukkan keunggulan akademik khususnya pada mata pelajaran Matematika, Fisika, dan Informatika.</p>
+            <p class="card-text lang-en">🇬🇧 Demonstrated strong academic performance, particularly in Mathematics, Physics, and Informatics.</p>
+        </div>
+    </section>
 
-                <div class="experience-item">
-                    <h3 class="item-title">Adaptive Smart Lamp</h3>
-                    <p class="item-subtitle">Technologies: Arduino, C++, Light Sensors | Status: Completed</p>
-                    <ul class="item-list">
-                        <li>Sistem lampu pintar berbasis mikrokontroler yang dirancang untuk mengoptimalkan pencahayaan ruangan kelas.</li>
-                        <li>Membantu mengurangi kelelahan mata siswa dengan menyesuaikan intensitas cahaya secara otomatis.</li>
-                    </ul>
+    <!-- SKILLS SECTION -->
+    <section class="container" id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-wrapper">
+            <!-- Kolom Technical Skills -->
+            <div class="card">
+                <h3 class="card-title">Technical Skills <span style="font-size: 14px; color: var(--text-secondary);">(Intermediate)</span></h3>
+                <div class="skill-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">C++</span>
+                    <span class="tag">Arduino</span>
+                    <span class="tag">IoT</span>
                 </div>
-
-                <div class="experience-item">
-                    <h3 class="item-title">SPMB Web System</h3>
-                    <p class="item-subtitle">Technologies: HTML, CSS, JavaScript | Status: In Development</p>
-                    <ul class="item-list">
-                        <li>Platform pendaftaran siswa baru berbasis web untuk menggantikan penggunaan Google Form di sekolah.</li>
-                        <li>Membuat proses pendataan menjadi lebih efektif, terstruktur, dan profesional.</li>
-                    </ul>
+            </div>
+            
+            <!-- Kolom Soft Skills -->
+            <div class="card">
+                <h3 class="card-title">Soft Skills</h3>
+                <div class="skill-tags">
+                    <span class="tag">Problem Solving</span>
+                    <span class="tag">Critical Thinking</span>
+                    <span class="tag">Adaptability</span>
+                    <span class="tag">Teamwork</span>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="experience-item">
-                    <h3 class="item-title">Prestasi & Organisasi</h3>
-                    <p class="item-subtitle">SMA Gunung Madu</p>
-                    <ul class="item-list">
-                        <li><strong>Juara 2 Lomba Robotik:</strong> Merancang dan memprogram robot Line Follower berbasis mikrokontroler.</li>
-                        <li><strong>Peserta OSN Fisika:</strong> Mewakili sekolah dalam kompetisi sains fisika tingkat kabupaten/kota.</li>
-                        <li><strong>Tutor Sebaya Informatika:</strong> Aktif di klub komputer dan membantu rekan sejawat memahami dasar pemrograman.</li>
-                    </ul>
+    <!-- PROJECTS SECTION -->
+    <section class="container" id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-wrapper">
+            <!-- Project 1: Smart Lamp -->
+            <div class="card">
+                <div class="project-header">
+                    <h3 class="card-title">Adaptive Smart Lamp</h3>
+                    <span class="status-badge success">Completed</span>
                 </div>
-            </section>
+                <p class="card-subtitle">Technologies: Arduino, C++, Light Sensors</p>
+                <p class="card-text">🇮🇩 Sistem lampu pintar berbasis mikrokontroler yang dirancang untuk mengoptimalkan pencahayaan ruangan kelas. Alat ini membantu mengurangi kelelahan mata siswa dengan menyesuaikan intensitas cahaya otomatis.</p>
+                <p class="card-text lang-en">🇬🇧 A microcontroller-based smart lighting system designed to optimize classroom illumination. It helps reduce students' eye strain by automatically adjusting light intensity.</p>
+            </div>
 
-            <!-- EDUCATION -->
-            <section class="content-section">
-                <div class="section-header">
-                    <div class="header-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <h2>EDUCATION</h2>
+            <!-- Project 2: SPMB Web -->
+            <div class="card">
+                <div class="project-header">
+                    <h3 class="card-title">SPMB Web System</h3>
+                    <span class="status-badge warning">In Development</span>
                 </div>
+                <p class="card-subtitle">Technologies: HTML, CSS, JavaScript</p>
+                <p class="card-text">🇮🇩 Platform pendaftaran siswa baru berbasis web untuk menggantikan penggunaan Google Form di sekolah agar proses pendataan lebih efektif, terstruktur, dan profesional.</p>
+                <p class="card-text lang-en">🇬🇧 A web-based student admission platform developed to replace the school's Google Form system, making the registration process more effective and structured.</p>
+            </div>
+        </div>
+    </section>
 
-                <div class="education-item">
-                    <h3 class="item-title">SMA Gunung Madu</h3>
-                    <p class="item-subtitle">Kurikulum Merdeka – Peminatan Informatika | 2024 – 2027 (Expected)</p>
-                    <p class="item-desc">Menunjukkan keunggulan akademik khususnya pada mata pelajaran Matematika, Fisika, dan Informatika.</p>
-                </div>
-            </section>
+    <!-- EXPERIENCE & ACHIEVEMENTS SECTION -->
+    <section class="container" id="experience">
+        <h2 class="section-title">Experience & Achievements</h2>
+        <div class="card">
+            <ul class="achievement-list">
+                <li>
+                    <strong>🏆 Juara 2 Lomba Robotik (Mobil Line Follower)</strong>
+                    <p class="card-text">Merancang dan memprogram robot Line Follower berbasis mikrokontroler yang berhasil meraih juara kedua dalam kompetisi.</p>
+                </li>
+                <li>
+                    <strong>⚛️ Peserta Olimpiade Sains Nasional (OSN) – Bidang Fisika</strong>
+                    <p class="card-text">Mewakili sekolah dalam kompetisi sains fisika, menunjukkan pemahaman mendalam tentang logika dan pemecahan masalah kompleks.</p>
+                </li>
+                <li>
+                    <strong>💻 Anggota Ekstrakurikuler Informatika & Tutor Sebaya</strong>
+                    <p class="card-text">Aktif berpartisipasi dalam klub komputer, menampilkan proyek IoT di pameran karya, serta membantu rekan sejawat dalam memahami dasar-dasar IT dan pemrograman.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
 
-        </main>
-    </div>
+    <!-- CONTACT & FOOTER SECTION -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="footer-text">Tertarik untuk berdiskusi, berkolaborasi, atau sekadar mengobrol tentang teknologi?</p>
+            <div class="contact-links">
+                <!-- Ubah emailanda@gmail.com menjadi email asli Anda -->
+                <a href="mailto:emailanda@gmail.com" class="contact-btn">✉️ Email Me</a>
+                <!-- Link ini akan langsung mengarah ke Instagram Anda -->
+                <a href="https://instagram.com/yanzzie7" target="_blank" class="contact-btn">📷 @yanzzie7</a>
+            </div>
+            <p class="copyright">© 2026 Ridho Evrilian. Built with HTML, CSS, & JS.</p>
+        </div>
+    </footer>
+
+    <!-- Nanti kita akan memasukkan konten Navbar, Profil, dll di sini -->
 
     <script src="script.js"></script>
 </body>
