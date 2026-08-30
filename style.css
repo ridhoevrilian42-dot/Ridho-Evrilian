@@ -436,3 +436,49 @@ body {
         width: 100%;
     }
 }
+
+/* --- LINK SIDEBAR (EMAIL & INSTAGRAM) --- */
+.sidebar-link {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.sidebar-link:hover {
+    color: #bdc3c7;
+    text-decoration: underline;
+}
+
+/* --- SKILL PROGRESS BAR --- */
+.skills-progress {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skill-item {
+    width: 100%;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 5px;
+    color: #ecf0f1;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: #3498db; /* Warna biru indikator progres */
+    border-radius: 4px;
+    transition: width 1s ease-in-out;
+}
