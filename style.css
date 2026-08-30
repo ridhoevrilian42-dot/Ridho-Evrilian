@@ -1,297 +1,276 @@
-/* --- RESET DASAR --- */
+/* --- RESET & VARIABLES --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: background-color 0.3s, color 0.3s; /* Efek transisi halus untuk tema */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* --- VARIABEL WARNA (TEMA TERANG) --- */
 :root {
-    --bg-color: #ffffff;
-    --text-color: #1a1a1a;
-    --text-secondary: #555555;
-    --accent-color: #0056b3; /* Deep Blue */
-    --card-bg: #f9f9f9;
-    --border-color: #e0e0e0;
+    --sidebar-bg: #374756;
+    --sidebar-text: #ffffff;
+    --sidebar-subtext: #8faec4;
+    --main-bg: #ffffff;
+    --main-text: #333333;
+    --main-header: #8faec4;
+    --progress-bg: #526577;
+    --progress-fill: #aed1e6;
+    --border-line: #dcdcdc;
 }
 
-/* --- VARIABEL WARNA (TEMA GELAP) --- */
 [data-theme="dark"] {
-    --bg-color: #121212;
-    --text-color: #f1f1f1;
-    --text-secondary: #b3b3b3;
-    --accent-color: #3399ff; /* Biru yang lebih terang untuk dark mode */
-    --card-bg: #1e1e1e;
-    --border-color: #333333;
+    --sidebar-bg: #1e252b;
+    --sidebar-text: #e0e0e0;
+    --sidebar-subtext: #648299;
+    --main-bg: #121212;
+    --main-text: #d5d5d5;
+    --main-header: #648299;
+    --progress-bg: #333e48;
+    --progress-fill: #648299;
+    --border-line: #333333;
 }
 
-/* --- MENERAPKAN WARNA KE BODY --- */
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-}
-
-/* --- NAVBAR --- */
-.navbar {
+    background-color: #eef2f5;
+    padding: 30px 0;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 20px 10%;
-    border-bottom: 1px solid var(--border-color);
-    background-color: var(--bg-color);
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 1px;
+[data-theme="dark"] body {
+    background-color: #0a0a0a;
 }
 
-.logo span {
-    color: var(--accent-color); /* Memberi warna biru pada titik */
+/* --- NAV BAR / TOGGLE BUTTON --- */
+.top-bar {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
 }
 
 .theme-btn {
-    background-color: var(--card-bg);
-    color: var(--text-color);
-    border: 1px solid var(--border-color);
-    padding: 8px 16px;
+    background-color: var(--sidebar-bg);
+    color: #fff;
+    border: none;
+    padding: 8px 18px;
     border-radius: 20px;
     cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.theme-btn:hover {
-    background-color: var(--border-color);
-}
-
-/* --- GLOBAL LAYOUT --- */
-.container {
-    max-width: 900px; /* Membatasi lebar agar rapi dibaca */
-    margin: 0 auto;   /* Membuat konten berada tepat di tengah layar */
-    padding: 60px 20px;
-}
-
-.section-title {
-    font-size: 28px;
-    color: var(--accent-color);
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-/* --- HERO SECTION --- */
-.hero {
-    text-align: center;
-    padding: 100px 20px 40px;
-}
-
-.hero-title {
-    font-size: 48px;
-    font-weight: 800;
-    margin-bottom: 10px;
-}
-
-.hero-subtitle {
-    font-size: 20px;
-    color: var(--text-secondary);
-}
-
-/* --- ABOUT ME --- */
-.about-content {
-    background-color: var(--card-bg);
-    padding: 40px;
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Memberikan bayangan halus */
-}
-
-.lang-id {
-    margin-bottom: 20px;
-    font-size: 16px;
-    text-align: justify;
-}
-
-.lang-en {
-    font-size: 15px;
-    color: var(--text-secondary);
-    font-style: italic; /* Memiringkan teks bahasa Inggris untuk pembeda */
-    text-align: justify;
-}
-
-/* --- DESAIN CARD UMUM --- */
-/* Kita buat class .card agar bisa dipakai berulang kali untuk Edu, Skill, dan Project nanti */
-.card {
-    background-color: var(--card-bg);
-    padding: 30px;
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    margin-bottom: 20px;
-}
-
-.card-title {
-    font-size: 20px;
-    color: var(--accent-color);
-    margin-bottom: 5px;
-}
-
-.card-subtitle {
-    font-size: 14px;
-    color: var(--text-secondary);
-    margin-bottom: 15px;
+    font-size: 13px;
     font-weight: 600;
 }
 
-.card-text {
-    font-size: 15px;
-    margin-bottom: 8px;
-}
-
-/* --- SKILLS SECTION --- */
-.skills-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Membagi layar menjadi 2 kolom sama besar */
-    gap: 20px; /* Jarak antar kolom */
-}
-
-.skill-tags {
+/* --- MAIN CONTAINER LAYOUT --- */
+.resume-container {
+    width: 100%;
+    max-width: 900px;
+    background-color: var(--main-bg);
     display: flex;
-    flex-wrap: wrap; /* Membuat tag otomatis turun ke baris baru jika penuh */
-    gap: 10px;
-    margin-top: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    min-height: 1000px;
 }
 
-.tag {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    border: 1px solid var(--accent-color);
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 500;
+/* --- SIDEBAR KIRI --- */
+.sidebar {
+    width: 35%;
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    padding: 40px 30px;
 }
 
-/* --- RESPONSIVE DESIGN UNTUK HP --- */
-/* Kode ini akan aktif HANYA JIKA layar lebih kecil dari 768px (seperti HP) */
-@media (max-width: 768px) {
-    .skills-wrapper {
-        grid-template-columns: 1fr; /* Ubah grid dari 2 kolom menjadi 1 kolom berderet ke bawah */
-    }
-}
-
-/* --- PROJECTS SECTION --- */
-.projects-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.project-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 5px;
-}
-
-/* Desain Badge Status */
-.status-badge {
-    font-size: 12px;
-    font-weight: bold;
-    padding: 4px 10px;
-    border-radius: 12px;
-}
-
-/* Warna Terang untuk Badge */
-.status-badge.success { background-color: #e6f4ea; color: #1e8e3e; }
-.status-badge.warning { background-color: #fef7e0; color: #f9ab00; }
-
-/* Warna Gelap untuk Badge (Dark Mode) */
-[data-theme="dark"] .status-badge.success { background-color: #1e4620; color: #81c995; }
-[data-theme="dark"] .status-badge.warning { background-color: #4c4424; color: #fde293; }
-
-/* --- ACHIEVEMENTS LIST --- */
-.achievement-list {
-    list-style-type: none; /* Menghilangkan titik bawaan list */
-}
-
-.achievement-list li {
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid var(--border-color); /* Garis pembatas tiap item */
-}
-
-.achievement-list li:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none; /* Menghilangkan garis di item terakhir */
-}
-
-.achievement-list strong {
-    color: var(--accent-color);
-    font-size: 16px;
-    display: block;
-    margin-bottom: 8px;
-}
-
-/* --- UPDATE RESPONSIVE UNTUK PROJECTS --- */
-@media (max-width: 768px) {
-    .projects-wrapper {
-        grid-template-columns: 1fr; /* Projects menjadi bertumpuk di HP */
-    }
-}
-
-/* --- FOOTER & CONTACT --- */
-.footer {
-    background-color: var(--card-bg);
-    border-top: 1px solid var(--border-color);
-    text-align: center;
-    margin-top: 40px;
-    padding-bottom: 20px;
-}
-
-.footer-text {
-    margin-bottom: 20px;
-    color: var(--text-secondary);
-}
-
-.contact-links {
+.profile-box {
+    width: 100%;
     display: flex;
     justify-content: center;
-    gap: 15px;
     margin-bottom: 30px;
-}
-
-/* Desain Tombol Kontak */
-.contact-btn {
-    text-decoration: none;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    border: 1px solid var(--accent-color);
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-weight: 600;
-}
-
-/* Efek saat kursor diarahkan ke tombol (Hover) */
-.contact-btn:hover {
-    background-color: var(--accent-color);
-    color: #ffffff; /* Teks menjadi putih saat disorot */
-}
-
-.copyright {
-    font-size: 13px;
-    color: var(--text-secondary);
 }
 
 .profile-img {
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 190px;
     object-fit: cover;
-    border-radius: 50%; /* Membuat foto menjadi bulat */
-    border: 3px solid var(--accent-color); /* Memberi bingkai biru */
+    border: 3px solid #8faec4;
+}
+
+.name-title-box {
+    margin-bottom: 40px;
+}
+
+.user-name {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    color: var(--sidebar-subtext);
+    margin-bottom: 8px;
+}
+
+.user-role {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.sidebar-section {
+    margin-bottom: 40px;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--progress-bg);
+    padding-bottom: 8px;
     margin-bottom: 20px;
+}
+
+.sidebar-header h2 {
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: var(--sidebar-subtext);
+}
+
+.sidebar-icon {
+    font-size: 16px;
+    color: var(--sidebar-subtext);
+}
+
+/* Contact Info */
+.contact-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    color: #d1dbe3;
+}
+
+.icon-circle {
+    width: 32px;
+    height: 32px;
+    background-color: var(--sidebar-subtext);
+    color: var(--sidebar-bg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+/* Skill Progress Bars */
+.skill-progress-item {
+    margin-bottom: 15px;
+}
+
+.skill-progress-item span {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: #e0e0e0;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: var(--progress-bg);
+}
+
+.progress {
+    height: 100%;
+    background-color: var(--progress-fill);
+}
+
+/* --- KONTEN UTAMA KANAN --- */
+.main-content {
+    width: 65%;
+    padding: 40px 40px;
+    color: var(--main-text);
+}
+
+.content-section {
+    margin-bottom: 35px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1.5px solid var(--border-line);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+.header-icon {
+    width: 32px;
+    height: 32px;
+    background-color: var(--main-header);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.section-header h2 {
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: var(--main-header);
+    font-weight: 700;
+}
+
+.summary-text {
+    font-size: 13.5px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Item Styling */
+.experience-item, .education-item {
+    margin-bottom: 20px;
+}
+
+.item-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--main-text);
+}
+
+.item-subtitle {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.item-list {
+    margin-left: 18px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.item-list li {
+    margin-bottom: 4px;
+}
+
+.item-desc {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* RESPONSIVE DESAIN UTK HP */
+@media (max-width: 768px) {
+    .resume-container {
+        flex-direction: column;
+    }
+    .sidebar, .main-content {
+        width: 100%;
+    }
 }
