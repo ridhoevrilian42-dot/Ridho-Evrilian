@@ -266,11 +266,54 @@ body {
 }
 
 /* RESPONSIVE DESAIN UTK HP */
+/* --- OPTIMISASI TAMPILAN HP (TETAP 2 KOLOM) --- */
 @media (max-width: 768px) {
-    .resume-container {
-        flex-direction: column;
+    body {
+        padding: 10px 0; /* Mengurangi padding luar agar muat di layar HP */
     }
-    .sidebar, .main-content {
+
+    .resume-container {
         width: 100%;
+        max-width: 100%;
+        box-shadow: none; /* Menghilangkan bayangan agar pas di tepi layar HP */
+    }
+
+    .sidebar {
+        width: 38%; /* Sedikit memperlebar sidebar di HP agar teks nama & skill muat */
+        padding: 20px 15px;
+    }
+
+    .main-content {
+        width: 62%;
+        padding: 20px 15px;
+    }
+
+    .profile-img {
+        width: 100%;
+        max-width: 110px;
+        height: auto;
+        aspect-ratio: 4 / 5;
+    }
+
+    .user-name {
+        font-size: 20px; /* Menyesuaikan ukuran font nama agar tidak terpotong */
+    }
+
+    .user-role {
+        font-size: 11px;
+    }
+
+    .sidebar-header h2, .section-header h2 {
+        font-size: 13px;
+    }
+
+    .contact-item, .skill-progress-item span, .summary-text, .item-list, .item-desc {
+        font-size: 11px; /* Ukuran teks dibikin lebih proporsional untuk layar kecil */
+    }
+
+    .icon-circle, .header-icon {
+        width: 24px;
+        height: 24px;
+        font-size: 11px;
     }
 }
