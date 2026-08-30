@@ -27,11 +27,18 @@
     --border-color: #333333;
 }
 
-/* --- MENERAPKAN WARNA KE BODY --- */
+/* --- MENERAPKAN WARNA & GAMBAR BACKGROUND KE BODY --- */
 body {
-    background-color: var(--bg-color);
+    /* Kita tambahkan efek gradasi gelap (rgba) di atas gambar agar CV lebih menonjol */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('sekolah.jpg');
+    background-size: cover; /* Membuat gambar memenuhi seluruh layar */
+    background-position: center; /* Memosisikan gambar di tengah */
+    background-attachment: fixed; /* Membuat gambar diam saat CV di-scroll */
+    
     color: var(--text-color);
     line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 }
 
 /* --- NAVBAR --- */
