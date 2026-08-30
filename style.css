@@ -286,3 +286,12 @@ body {
     font-size: 13px;
     color: var(--text-secondary);
 }
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%; /* Membuat foto menjadi bulat */
+    border: 3px solid var(--accent-color); /* Memberi bingkai biru */
+    margin-bottom: 20px;
+}
