@@ -29,16 +29,15 @@
 
 /* --- MENERAPKAN WARNA & GAMBAR BACKGROUND KE BODY --- */
 body {
-    /* Kita tambahkan efek gradasi gelap (rgba) di atas gambar agar CV lebih menonjol */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('sekolah.jpg');
-    background-size: cover; /* Membuat gambar memenuhi seluruh layar */
-    background-position: center; /* Memosisikan gambar di tengah */
-    background-attachment: fixed; /* Membuat gambar diam saat CV di-scroll */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     
     color: var(--text-color);
     line-height: 1.6;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+/* Jangan ada tambahan tanda } lagi di sini */
 }
 
 /* --- NAVBAR --- */
@@ -292,4 +291,50 @@ body {
 .copyright {
     font-size: 13px;
     color: var(--text-secondary);
+}
+
+/* --- LAYOUT DUA KOLOM & FOTO PROFIL --- */
+.cv-layout {
+    display: flex;
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: var(--bg-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    width: 35%;
+    background-color: #3b4d61;
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* KODE UNTUK MEMBULATKAN FOTO */
+.profile-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%; /* Membuat foto bulat */
+    object-fit: cover; /* Mencegah foto gepeng */
+    border: 4px solid #ffffff;
+    margin-bottom: 20px;
+}
+
+.sidebar-name { font-size: 26px; margin-bottom: 5px; }
+.sidebar-role { font-size: 14px; margin-bottom: 30px; color: #aebfd1; }
+.sidebar-box { text-align: left; margin-bottom: 30px; }
+.sidebar-box h3 { border-bottom: 1px solid #ffffff; margin-bottom: 15px; font-size: 16px; }
+
+.main-content {
+    width: 65%;
+    padding: 40px;
+    background-color: var(--bg-color);
+}
+
+.content-box { margin-bottom: 30px; }
+.content-box h2 { border-bottom: 2px solid var(--border-color); color: var(--accent-color); margin-bottom: 15px; font-size: 18px; }
+
+@media (max-width: 768px) {
+    .cv-layout { flex-direction: column; }
+    .sidebar, .main-content { width: 100%; }
 }
