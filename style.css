@@ -1,0 +1,288 @@
+/* --- RESET DASAR --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s, color 0.3s; /* Efek transisi halus untuk tema */
+}
+
+/* --- VARIABEL WARNA (TEMA TERANG) --- */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #1a1a1a;
+    --text-secondary: #555555;
+    --accent-color: #0056b3; /* Deep Blue */
+    --card-bg: #f9f9f9;
+    --border-color: #e0e0e0;
+}
+
+/* --- VARIABEL WARNA (TEMA GELAP) --- */
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #f1f1f1;
+    --text-secondary: #b3b3b3;
+    --accent-color: #3399ff; /* Biru yang lebih terang untuk dark mode */
+    --card-bg: #1e1e1e;
+    --border-color: #333333;
+}
+
+/* --- MENERAPKAN WARNA KE BODY --- */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--accent-color); /* Memberi warna biru pada titik */
+}
+
+.theme-btn {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.theme-btn:hover {
+    background-color: var(--border-color);
+}
+
+/* --- GLOBAL LAYOUT --- */
+.container {
+    max-width: 900px; /* Membatasi lebar agar rapi dibaca */
+    margin: 0 auto;   /* Membuat konten berada tepat di tengah layar */
+    padding: 60px 20px;
+}
+
+.section-title {
+    font-size: 28px;
+    color: var(--accent-color);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    text-align: center;
+    padding: 100px 20px 40px;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    color: var(--text-secondary);
+}
+
+/* --- ABOUT ME --- */
+.about-content {
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Memberikan bayangan halus */
+}
+
+.lang-id {
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.lang-en {
+    font-size: 15px;
+    color: var(--text-secondary);
+    font-style: italic; /* Memiringkan teks bahasa Inggris untuk pembeda */
+    text-align: justify;
+}
+
+/* --- DESAIN CARD UMUM --- */
+/* Kita buat class .card agar bisa dipakai berulang kali untuk Edu, Skill, dan Project nanti */
+.card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-size: 20px;
+    color: var(--accent-color);
+    margin-bottom: 5px;
+}
+
+.card-subtitle {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.card-text {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+/* --- SKILLS SECTION --- */
+.skills-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Membagi layar menjadi 2 kolom sama besar */
+    gap: 20px; /* Jarak antar kolom */
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap; /* Membuat tag otomatis turun ke baris baru jika penuh */
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.tag {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--accent-color);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* --- RESPONSIVE DESIGN UNTUK HP --- */
+/* Kode ini akan aktif HANYA JIKA layar lebih kecil dari 768px (seperti HP) */
+@media (max-width: 768px) {
+    .skills-wrapper {
+        grid-template-columns: 1fr; /* Ubah grid dari 2 kolom menjadi 1 kolom berderet ke bawah */
+    }
+}
+
+/* --- PROJECTS SECTION --- */
+.projects-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+/* Desain Badge Status */
+.status-badge {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+/* Warna Terang untuk Badge */
+.status-badge.success { background-color: #e6f4ea; color: #1e8e3e; }
+.status-badge.warning { background-color: #fef7e0; color: #f9ab00; }
+
+/* Warna Gelap untuk Badge (Dark Mode) */
+[data-theme="dark"] .status-badge.success { background-color: #1e4620; color: #81c995; }
+[data-theme="dark"] .status-badge.warning { background-color: #4c4424; color: #fde293; }
+
+/* --- ACHIEVEMENTS LIST --- */
+.achievement-list {
+    list-style-type: none; /* Menghilangkan titik bawaan list */
+}
+
+.achievement-list li {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color); /* Garis pembatas tiap item */
+}
+
+.achievement-list li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none; /* Menghilangkan garis di item terakhir */
+}
+
+.achievement-list strong {
+    color: var(--accent-color);
+    font-size: 16px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* --- UPDATE RESPONSIVE UNTUK PROJECTS --- */
+@media (max-width: 768px) {
+    .projects-wrapper {
+        grid-template-columns: 1fr; /* Projects menjadi bertumpuk di HP */
+    }
+}
+
+/* --- FOOTER & CONTACT --- */
+.footer {
+    background-color: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    margin-top: 40px;
+    padding-bottom: 20px;
+}
+
+.footer-text {
+    margin-bottom: 20px;
+    color: var(--text-secondary);
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+/* Desain Tombol Kontak */
+.contact-btn {
+    text-decoration: none;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--accent-color);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+/* Efek saat kursor diarahkan ke tombol (Hover) */
+.contact-btn:hover {
+    background-color: var(--accent-color);
+    color: #ffffff; /* Teks menjadi putih saat disorot */
+}
+
+.copyright {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
