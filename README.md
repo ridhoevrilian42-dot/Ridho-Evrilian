@@ -1,4 +1,4 @@
-# Hi there, I'm [Nama Kamu] 👋
+# Hi there, I'm [Ridho Evrilian] 👋
 
 A passionate **[Profesi/Status, contoh: Frontend Developer / Student]** based in Indonesia.
 
